@@ -46,9 +46,4 @@ sales = pd.read_csv("data/campus_cafe_sales.csv")
 
 Coffee is two of the five items but most of the volume, so a revenue
 trend across all categories mostly just shows the coffee trend anyway.
-
 :::
-git pull                             # bring down anything already on GitHub
-git add .                            # stage every new or changed file
-git commit -m "update with new page" # save a snapshot with a clear message
-git push                             # upload that snapshot to GitHub
