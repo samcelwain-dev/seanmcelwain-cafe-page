@@ -1,0 +1,54 @@
+---
+title: "My First Quarto Page"
+author: "Sean McElwain"
+format: html
+---
+
+## Welcome
+
+This apge was written in **Quarto** and published straight from Github.
+
+- It renders to a real web page.
+- The source is plain text, so Git tacks every change cleanly.
+
+```{python}
+print("Hello from a rendered code chunk!")
+```
+
+## Load
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+sales = pd.read_csv("data/campus_cafe_sales.csv")
+sales.head()
+```
+
+```{python}
+#| echo: false
+
+print("This line was produced by Python when the document was rendered.")
+```
+
+**Dataset:** `campus_cafe_sales.csv` (posted with this assignment).
+
+```{python}
+#| include: false
+
+# Runs silently. Nothing appears here, but `sales` exists for every chunk below.
+import pandas as pd
+sales = pd.read_csv("data/campus_cafe_sales.csv")
+```
+
+::: {.callout-note}
+## Why I filtered to coffee
+
+Coffee is two of the five items but most of the volume, so a revenue
+trend across all categories mostly just shows the coffee trend anyway.
+
+:::
+git pull                             # bring down anything already on GitHub
+git add .                            # stage every new or changed file
+git commit -m "update with new page" # save a snapshot with a clear message
+git push                             # upload that snapshot to GitHub
